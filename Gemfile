@@ -24,6 +24,12 @@ gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
+group :development, :test do
+gem 'rspec-rails', '~> 4.0.0'
+# Call 'byebug' anywhere in the code to stop execution and get a debugger console
+gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+end
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
@@ -68,5 +74,6 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem 'webdrivers'
 
 end
